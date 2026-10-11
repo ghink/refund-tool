@@ -1,0 +1,35 @@
+# Every top-level key is a space (one merchant configuration), and those are what the picker lists.
+# log is a reserved section name, so do not use it for a space.
+# config_debug.yaml has the same shape: when present it overrides this file and switches on debug
+# mode. Do not commit it.
+example:
+  alipay:
+    app_id: ""
+    # App private key: the bare base64 body from the Alipay console, without -----BEGIN/END----- markers.
+    app_cert_private_key: ""
+    # Certificates: PEM file contents, markers included.
+    app_cert: ""
+    root_cert: ""
+    public_cert: ""
+    is_prod: true
+  wechat_pay:
+    app_id: ""
+    app_secret: ""
+    merchant_id: ""
+    merchant_api_v3_key: ""
+    merchant_cert_serial_number: ""
+    merchant_private_key: ""
+    # The WeChat Pay public key and its id are required.
+    public_key: ""
+    public_key_id: ""
+  # Wrapped around the trade id on the way to the channel; the UI takes the bare id.
+  prefix: ""
+  suffix: ""
+
+# Optional file log; an empty file writes nothing to disk.
+#log:
+#  file: "refund-tool.log"
+#  max_size: 10
+#  max_backups: 3
+#  max_age: 7
+#  compress: false

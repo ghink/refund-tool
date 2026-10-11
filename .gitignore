@@ -589,3 +589,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
+# 本地凭据、日志与 IDE 状态，不要提交
+config_debug.yaml
+refund-tool
+refund-tool.exe
+.idea/
